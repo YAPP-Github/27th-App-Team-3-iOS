@@ -19,7 +19,7 @@ function mdToNotionBlocks(md) {
         if (h3) {
             blocks.push({
                 object: "block",
-                type: "heading_3",
+                type: "heading_2",
                 heading_2: { rich_text: rt(h3[1]) },
             });
             continue;
@@ -75,7 +75,7 @@ async function main() {
 
     const properties = {
         "작업 이름": { title: rt(`#${issueNumber} ${titleText}`) },
-        "상태": { status: { name: "작업 중" } },
+        "상태": { status: { name: "진행 중" } },
         "작업 유형": { multi_select: [{ name: "팀 작업" }] },
         "마감일": { date: { start: "2026-03-01" } },
     };
@@ -89,6 +89,12 @@ async function main() {
 
     await notion.pages.create({
         parent: { data_source_id: dataSourceId },
+        icon: {
+            type: "external",
+            external: {
+                url: "https://github.com/user-attachments/assets/7059c317-215f-4116-91b8-4fdc92a13ce1",
+            },
+        },
         properties,
         children,
     });
