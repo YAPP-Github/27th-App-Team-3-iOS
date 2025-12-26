@@ -146,10 +146,16 @@ platform :ios do
     )
   end
 
+  desc "Run SwiftLint"
+  lane :lint do
+    sh("cd .. && swiftlint lint --config .swiftlint.yml")
+  end
+
   desc "CI for pull requests: build modules + test modules"
   lane :ci_pr do
     begin
       generate
+      lint
       build_app_simulator
     rescue => e
       UI.error("CI failed: #{e.message}")
@@ -159,6 +165,7 @@ platform :ios do
 
   lane :ci_main do
     generate
+    lint
     load_signing
     archive_for_ci
   end

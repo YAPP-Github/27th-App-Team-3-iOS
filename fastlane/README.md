@@ -79,6 +79,14 @@ Build all modules (without main app)
 
 
 
+### ios lint
+
+```sh
+[bundle exec] fastlane ios lint
+```
+
+Run SwiftLint
+
 ### ios ci_pr
 
 ```sh

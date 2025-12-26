@@ -40,6 +40,11 @@ jobs:
       - name: 🛠 Install tuist dependencies
         run: tuist install
 
+      - name: 🧰 Install SwiftLint
+        run: |
+          brew install swiftlint
+          swiftlint version
+
       - name: 🧪 Run PR Checks (build + test)
         env:
           MATCH_REPO_URL: ${{ secrets.MATCH_REPO_URL }}
