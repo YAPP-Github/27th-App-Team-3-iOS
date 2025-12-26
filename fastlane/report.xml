@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000269">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="1: Switch to ios generate lane" time="0.000118">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="2: cd .. &amp;&amp; tuist generate" time="0.964693">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="3: xcodebuild -workspace ../Twix.xcworkspace -list" time="0.604424">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="4: xcodebuild -workspace ../Twix.xcworkspace -list" time="0.565362">
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>
