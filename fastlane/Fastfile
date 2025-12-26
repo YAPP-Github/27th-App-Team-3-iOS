@@ -15,15 +15,21 @@
 
 default_platform(:ios)
 
+def match_with_optional_keychain(type:, readonly:)
+  options = { type: type, readonly: readonly }
+
+  if ENV["CI"] == "true"
+    options[:keychain_name] = ENV.fetch("KEYCHAIN_NAME")
+    options[:keychain_password] = ENV.fetch("KEYCHAIN_PASSWORD")
+  end
+
+  match(**options)
+end
+
 platform :ios do
   WORKSPACE_NAME     = "Twix.xcworkspace"
   MAIN_APP_SCHEME    = "Twix"
   WORKSPACE_SCHEME   = "Twix-Workspace"
-
-  DEV_TEAM_ID        = ENV["DEV_TEAM_ID"]
-  DIST_TEAM_ID       = ENV["DIST_TEAM_ID"]
-  DEV_IDENTITY       = ENV["DEV_CODE_SIGN_IDENTITY"]
-  DIST_IDENTITY      = ENV["DIST_CODE_SIGN_IDENTITY"]
 
   BUNDLE_ID          = ENV["APP_IDENTIFIER"]
   APPLE_ID           = ENV["APPLE_ID"]
@@ -53,6 +59,7 @@ platform :ios do
     sh("xcodebuild -workspace ../#{WORKSPACE_NAME} -list")
   end
 
+  # 사용 금지
   lane :setup_signing do
     unlock_keychain(
       path: "~/Library/Keychains/login.keychain-db",
@@ -64,13 +71,15 @@ platform :ios do
   end
 
   lane :load_signing do
-    unlock_keychain(
-      path: "~/Library/Keychains/login.keychain-db",
-      password: ENV["KEYCHAIN_PASSWORD"]
-    )
+    if ENV["CI"] != "true"
+      unlock_keychain(
+        path: "~/Library/Keychains/login.keychain-db",
+        password: ENV["KEYCHAIN_PASSWORD"]
+      )
+    end
 
-    match(type: "development", readonly: true)
-    match(type: "appstore", readonly: true)
+    match_with_optional_keychain(type: "development", readonly: true)
+    match_with_optional_keychain(type: "appstore", readonly: true)
   end
 
   lane :archive_for_ci do

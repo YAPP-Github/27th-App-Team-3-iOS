@@ -5,27 +5,64 @@
     
     
       
-      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000269">
+      <testcase classname="fastlane.lanes" name="00: default_platform" time="0.000435">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="1: Switch to ios generate lane" time="0.000118">
+      <testcase classname="fastlane.lanes" name="01: Switch to ios generate lane" time="0.000172">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="2: cd .. &amp;&amp; tuist generate" time="0.964693">
+      <testcase classname="fastlane.lanes" name="02: cd .. &amp;&amp; tuist generate" time="1.090359">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="3: xcodebuild -workspace ../Twix.xcworkspace -list" time="0.604424">
+      <testcase classname="fastlane.lanes" name="03: xcodebuild -workspace ../Twix.xcworkspace -list" time="0.693492">
         
       </testcase>
     
       
-      <testcase classname="fastlane.lanes" name="4: xcodebuild -workspace ../Twix.xcworkspace -list" time="0.565362">
+      <testcase classname="fastlane.lanes" name="04: Switch to ios load_signing lane" time="0.000126">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="05: unlock_keychain" time="4.915641">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="06: match" time="1.440653">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="07: match" time="1.358146">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="08: Switch to ios archive_for_upload lane" time="0.000112">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="09: build_app" time="20.669277">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="10: app_store_connect_api_key" time="0.002016">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="11: upload_to_testflight" time="23.226684">
+        
+          <failure message="/Users/jiyong/.rvm/gems/ruby-3.3.5/gems/fastlane-2.230.0/fastlane/lib/fastlane/actions/actions_helper.rb:67:in `execute_action&apos;&#10;/Users/jiyong/.rvm/gems/ruby-3.3.5/gems/fastlane-2.230.0/fastlane/lib/fastlane/runner.rb:255:in `block in execute_action&apos;&#10;/Users/jiyong/.rvm/gems/ruby-3.3.5/gems/fastlane-2.230.0/fastlane/lib/fastlane/runner.rb:229:in `chdir&apos;&#10;/Users/jiyong/.rvm/gems/ruby-3.3.5/gems/fastlane-2.230.0/fastlane/lib/fastlane/runner.rb:229:in `execute_action&apos;&#10;/Users/jiyong/.rvm/gems/ruby-3.3.5/gems/fastlane-2.230.0/fastlane/lib/fastlane/runner.rb:157:in `trigger_action_by_name&apos;&#10;/Users/jiyong/.rvm/gems/ruby-3.3.5/gems/fastlane-2.230.0/fastlane/lib/fastlane/fast_file.rb:159:in `method_missing&apos;&#10;Fastfile:169:in `block (2 levels) in parsing_binding&apos;&#10;/Users/jiyong/.rvm/gems/ruby-3.3.5/gems/fastlane-2.230.0/fastlane/lib/fastlane/lane.rb:41:in `call&apos;&#10;/Users/jiyong/.rvm/gems/ruby-3.3.5/gems/fastlane-2.230.0/fastlane/lib/fastlane/runner.rb:49:in `block in execute&apos;&#10;/Users/jiyong/.rvm/gems/ruby-3.3.5/gems/fastlane-2.230.0/fastlane/lib/fastlane/runner.rb:45:in `chdir&apos;&#10;/Users/jiyong/.rvm/gems/ruby-3.3.5/gems/fastlane-2.230.0/fastlane/lib/fastlane/runner.rb:45:in `execute&apos;&#10;/Users/jiyong/.rvm/gems/ruby-3.3.5/gems/fastlane-2.230.0/fastlane/lib/fastlane/lane_manager.rb:46:in `cruise_lane&apos;&#10;/Users/jiyong/.rvm/gems/ruby-3.3.5/gems/fastlane-2.230.0/fastlane/lib/fastlane/command_line_handler.rb:34:in `handle&apos;&#10;/Users/jiyong/.rvm/gems/ruby-3.3.5/gems/fastlane-2.230.0/fastlane/lib/fastlane/commands_generator.rb:110:in `block (2 levels) in run&apos;&#10;/Users/jiyong/.rvm/gems/ruby-3.3.5/gems/commander-4.6.0/lib/commander/command.rb:187:in `call&apos;&#10;/Users/jiyong/.rvm/gems/ruby-3.3.5/gems/commander-4.6.0/lib/commander/command.rb:157:in `run&apos;&#10;/Users/jiyong/.rvm/gems/ruby-3.3.5/gems/commander-4.6.0/lib/commander/runner.rb:444:in `run_active_command&apos;&#10;/Users/jiyong/.rvm/gems/ruby-3.3.5/gems/fastlane-2.230.0/fastlane_core/lib/fastlane_core/ui/fastlane_runner.rb:124:in `run!&apos;&#10;/Users/jiyong/.rvm/gems/ruby-3.3.5/gems/commander-4.6.0/lib/commander/delegates.rb:18:in `run!&apos;&#10;/Users/jiyong/.rvm/gems/ruby-3.3.5/gems/fastlane-2.230.0/fastlane/lib/fastlane/commands_generator.rb:363:in `run&apos;&#10;/Users/jiyong/.rvm/gems/ruby-3.3.5/gems/fastlane-2.230.0/fastlane/lib/fastlane/commands_generator.rb:43:in `start&apos;&#10;/Users/jiyong/.rvm/gems/ruby-3.3.5/gems/fastlane-2.230.0/fastlane/lib/fastlane/cli_tools_distributor.rb:123:in `take_off&apos;&#10;/Users/jiyong/.rvm/gems/ruby-3.3.5/gems/fastlane-2.230.0/bin/fastlane:23:in `&lt;top (required)&gt;&apos;&#10;/Users/jiyong/.rvm/gems/ruby-3.3.5/bin/fastlane:25:in `load&apos;&#10;/Users/jiyong/.rvm/gems/ruby-3.3.5/bin/fastlane:25:in `&lt;main&gt;&apos;&#10;/Users/jiyong/.rvm/gems/ruby-3.3.5/bin/ruby_executable_hooks:22:in `eval&apos;&#10;/Users/jiyong/.rvm/gems/ruby-3.3.5/bin/ruby_executable_hooks:22:in `&lt;main&gt;&apos;&#10;&#10;Error uploading ipa file: &#10; [Application Loader Error Output]: [ContentDelivery.Uploader.600000A48280] Validation failed (409) Missing required icon file. The bundle does not contain an app icon for iPhone / iPod Touch of exactly &apos;120x120&apos; pixels, in .png format for iOS versions &gt;= 10.0. To support older versions of iOS, the icon may be required in the bundle outside of an asset catalog. Make sure the Info.plist file includes appropriate entries referencing the file. See https://developer.apple.com/documentation/bundleresources/information_property_list/user_interface. (ID: 0cdbfa0e-8d4a-4707-a01c-368179723210)&#10;[Application Loader Error Output]: [ContentDelivery.Uploader.600000A48280] Validation failed (409) Missing required icon file. The bundle does not contain an app icon for iPad of exactly &apos;152x152&apos; pixels, in .png format for iOS versions &gt;= 10.0. To support older operating systems, the icon may be required in the bundle outside of an asset catalog. Make sure the Info.plist file includes appropriate entries referencing the file. See https://developer.apple.com/documentation/bundleresources/information_property_list/user_interface. (ID: 9f2bdcbb-a9f8-4bec-a574-3ed7186234cb)&#10;[Application Loader Error Output]: [ContentDelivery.Uploader.600000A48280] Validation failed (409) Invalid bundle. Apps that support Multitasking on iPad must provide the app’s launch screen using an Xcode storyboard, or using UILaunchScreen if the app’s MinimumOSVersion is 14 or higher. Verify that the UILaunchStoryboardName key is included in your org.yapp.twix bundle if you’re using a storyboard. For details, see: https://developer.apple.com/documentation/bundleresources/information_property_list/uilaunchstoryboardname (ID: ecf80eef-eab5-4901-a0ad-0f236b5cb053)&#10;[Application Loader Error Output]: [ContentDelivery.Uploader.600000A48280] Validation failed (409) Missing Info.plist value. A value for the Info.plist key &apos;CFBundleIconName&apos; is missing in the bundle &apos;org.yapp.twix&apos;. Apps built with iOS 11 or later SDK must supply app icons in an asset catalog and must also provide a value for this Info.plist key. For more information see http://help.apple.com/xcode/mac/current/#/dev10510b1f7. (ID: 586dc4b0-1723-4feb-a4c4-9afb3c392340)&#10;[Application Loader Error Output]: Error uploading &apos;/var/folders/hf/658m5yx169n_0_h9n7nzqp9r0000gn/T/3ac74635-6085-4da2-a527-959caeb1219d.ipa&apos;.&#10;[Application Loader Error Output]: Validation failed Missing required icon file. The bundle does not contain an app icon for iPhone / iPod Touch of exactly &apos;120x120&apos; pixels, in .png format for iOS versions &gt;= 10.0. To support older versions of iOS, the icon may be required in the bundle outside of an asset catalog. Make sure the Info.plist file includes appropriate entries referencing the file. See https://developer.apple.com/documentation/bundleresources/information_property_list/user_interface. (ID: 0cdbfa0e-8d4a-4707-a01c-368179723210) (409)&#10;[Application Loader Error Output]: Validation failed Missing required icon file. The bundle does not contain an app icon for iPad of exactly &apos;152x152&apos; pixels, in .png format for iOS versions &gt;= 10.0. To support older operating systems, the icon may be required in the bundle outside of an asset catalog. Make sure the Info.plist file includes appropriate entries referencing the file. See https://developer.apple.com/documentation/bundleresources/information_property_list/user_interface. (ID: 9f2bdcbb-a9f8-4bec-a574-3ed7186234cb) (409)&#10;[Application Loader Error Output]: Validation failed Invalid bundle. Apps that support Multitasking on iPad must provide the app’s launch screen using an Xcode storyboard, or using UILaunchScreen if the app’s MinimumOSVersion is 14 or higher. Verify that the UILaunchStoryboardName key is included in your org.yapp.twix bundle if you’re using a storyboard. For details, see: https://developer.apple.com/documentation/bundleresources/information_property_list/uilaunchstoryboardname (ID: ecf80eef-eab5-4901-a0ad-0f236b5cb053) (409)&#10;[Application Loader Error Output]: Validation failed Missing Info.plist value. A value for the Info.plist key &apos;CFBundleIconName&apos; is missing in the bundle &apos;org.yapp.twix&apos;. Apps built with iOS 11 or later SDK must supply app icons in an asset catalog and must also provide a value for this Info.plist key. For more information see http://help.apple.com/xcode/mac/current/#/dev10510b1f7. (ID: 586dc4b0-1723-4feb-a4c4-9afb3c392340) (409)&#10;[Application Loader Error Output]: The call to the altool completed with a non-zero exit status: 1. This indicates a failure." />
         
       </testcase>
     
