@@ -33,6 +33,8 @@ public extension Project.Environment {
     enum BundleId {
         /// 번들 ID의 기본 prefix입니다.
         public static let bundlePrefix = "org.yapp.twix"
+        /// 팀 ID입니다.
+        public static let teamId = "VZC79KP79S"
         /// 알림 확장 번들 ID입니다.
         public static let notification = bundlePrefix + ".notification.extension"
         /// 위젯 확장 번들 ID입니다.

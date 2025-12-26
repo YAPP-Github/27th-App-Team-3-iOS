@@ -105,7 +105,13 @@ platform :ios do
   desc "Generate Tuist project"
   lane :generate do
     UI.message("🏗️ Generating Tuist project...")
-    sh("cd .. && tuist generate")
+
+    if ENV["CI"] == "true"
+      sh("cd .. && tuist generate")
+    else
+      sh("cd .. && make generate")
+    end
+    
     UI.success("✅ Tuist project generated!")
 
     UI.message("📋 Available schemes:")
