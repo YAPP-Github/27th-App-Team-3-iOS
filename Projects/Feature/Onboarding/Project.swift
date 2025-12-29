@@ -31,7 +31,7 @@ let project = Project.makeModule(
                     .feature(testing: .onboarding)
                 ]
             )
-        ),
+        ),    
         .feature(
             example: .onboarding,
             config: .init(
